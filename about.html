@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MAK Digital - Ethiopia's Premier Digital Marketing & Energy Efficiency Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero-about {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            background: linear-gradient(to right, white, var(--light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .founder-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-top: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .founder-badge img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid white;
+        }
+
+        /* Who We Are Section */
+        .about-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-card-icon {
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .about-card-content {
+            padding: 30px;
+        }
+
+        .about-card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .about-card-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .program-card {
+
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card-header {
+            background: #c4e1e694;
+            color: black;
+            padding: 20px;
+            position: relative;
+        }
+
+        .program-card-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .program-card-header span {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .program-card-body {
+            padding: 20px;
+        }
+
+        .program-card-body ul {
+            list-style: none;
+        }
+
+        .program-card-body ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .program-card-body ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Mission Vision Values */
+        .mvv-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .mvv-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .mvv-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .mvv-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mission-card {
+            background: rgba(46, 204, 113, 0.1);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+        }
+
+        .vision-card {
+            background: rgba(52, 152, 219, 0.1);
+            border: 1px solid rgba(52, 152, 219, 0.2);
+        }
+
+        .values-card {
+            background: rgba(243, 156, 18, 0.1);
+            border: 1px solid rgba(243, 156, 18, 0.2);
+        }
+
+        .mvv-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .mission-card i {
+            color: var(--primary);
+        }
+
+        .vision-card i {
+            color: var(--secondary);
+        }
+
+        .values-card i {
+            color: var(--accent);
+        }
+
+        .mvv-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .mvv-card p {
+            color: #555;
+        }
+
+        .values-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .values-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .values-list li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-us .container h2 {
+            color: white;
+        }
+
+        .why-choose-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.03)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            opacity: 0.9;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .tools-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tool-logo {
+            width: 120px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .tool-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .tool-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .about-card-icon {
+                height: 150px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header id="header">
+  <div class="container header-container">
+    <a href="index.html" class="logo">
+      <img src="images/makLogojpg-removebg-preview.png" alt="MAK Digital Marketing Agency" />
+      <h2>MAK</h2>
+    </a>
+
+    <nav>
+      <!-- Desktop menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger icon -->
+      <div class="mobile-menu-btn" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Slide-in Menu -->
+  <div class="mobile-slide-menu" id="mobile-slide-menu">
+    <div class="close-btn" id="mobile-menu-close">
+      <i class="fas fa-times"></i>
+    </div>
+    <ul>
+      <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+      <li><a href="index.html#services" onclick="closeMobileMenu()">Services</a></li>
+      <li><a href="index.html#portfolio" onclick="closeMobileMenu()">Portfolio</a></li>
+      <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+      <li><a href="index.html#pricing" onclick="closeMobileMenu()">Pricing</a></li>
+      <li><a href="index.html#blog" onclick="closeMobileMenu()">Blog</a></li>
+      <li><a href="index.html#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+</header>
+>
+
+
+
+    <!-- Hero About Section -->
+    <section class="hero-about">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Driving Digital Growth & Energy Efficiency</h1>
+                <p>MAK Digital is transforming Ethiopian businesses through innovative digital marketing and sustainable
+                    energy solutions</p>
+                <div class="founder-badge">
+                    <img src="images/melaku.jpg" alt="Melaku Tarekegne">
+                    <span>Founded by Melaku Tarekegne</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who We Are</h2>
+                <p>MAK Digital Marketing & Social Media Management Agency is a forward-thinking Ethiopian agency
+                    committed to driving business success through cutting-edge digital solutions and energy efficiency
+                    services.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="about-card-content">
+                        <h3>Our Location</h3>
+                        <p>Based in Bahir Dar, Ethiopia, we serve clients across the country and beyond.</p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="about-card-content">
+                        <h3>Our Clients</h3>
+                        <p>We work with startups, local businesses, and enterprises who want to grow online and go
+                            green.</p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="about-card-content">
+                        <h3>Our Specialties</h3>
+                        <p>Digital Marketing & Social Media Management combined with Energy Audit & Efficiency
+                            Management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <p>We offer comprehensive solutions across four specialized programs</p>
+            </div>
+
+            <div class="program-cards">
+                <div class="program-card">
+                    <div class="program-card-header">
+                        <h3>Program I</h3>
+                        <span>Digital Marketing for Green Energy</span>
+                    </div>
+                    <div class="program-card-body">
+                        <ul>
+                            <li>Website development for green companies</li>
+                            <li>Social media strategy and management</li>
+                            <li>Content creation for sustainability brands</li>
+                            <li>Targeted advertising campaigns</li>
+                            <li>SEO for environmental businesses</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-card-header">
+                        <h3>Program II</h3>
+                        <span>Social Media Management Agency</span>
+                    </div>
+                    <div class="program-card-body">
+                        <ul>
+                            <li>Affordable monthly management packages</li>
+                            <li>Professional content creation</li>
+                            <li>Platform-specific strategy development</li>
+                            <li>Paid advertising management</li>
+                            <li>Performance analytics and reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-card-header">
+                        <h3>Program III</h3>
+                        <span>Energy Audit Management</span>
+                    </div>
+                    <div class="program-card-body">
+                        <ul>
+                            <li>Comprehensive energy audits</li>
+                            <li>Smart energy upgrade recommendations</li>
+                            <li>Sustainable transition support</li>
+                            <li>Cost-benefit analysis</li>
+                            <li>Implementation guidance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-card-header">
+                        <h3>Program IV</h3>
+                        <span>Work Discipline & Human Development</span>
+                    </div>
+                    <div class="program-card-body">
+                        <ul>
+                            <li>Professional development training</li>
+                            <li>Personal growth workshops</li>
+                            <li>Online and offline programs</li>
+                            <li>Team productivity enhancement</li>
+                            <li>Leadership development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Values -->
+    <section class="mvv-section">
+        <div class="container">
+            <div class="mvv-container">
+                <div class="mvv-card mission-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses through strategic digital marketing and cutting-edge technology solutions
+                        that drive measurable growth and sustainable success.</p>
+                </div>
+
+                <div class="mvv-card vision-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading agency in delivering ROI-driven digital transformation for startups and
+                        enterprises across Ethiopia, while promoting sustainable business practices.</p>
+                </div>
+
+                <div class="mvv-card values-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Our Values</h3>
+                    <ul class="values-list">
+                        <li>Sustainability in all we do</li>
+                        <li>Continuous innovation</li>
+                        <li>Empowerment of our clients</li>
+                        <li>Data-driven decisions</li>
+                        <li>Client growth above all</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose MAK Digital?</h2>
+                <p>We are not just another digital agency. Here's what sets us apart:</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability Focus</h3>
+                    <p>We combine digital excellence with environmental responsibility, helping businesses grow while
+                        reducing their ecological footprint.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Proven Results</h3>
+                    <p>Our strategies are built on data and real-world experience, delivering measurable ROI for our
+                        clients.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Social Impact</h3>
+                    <p>We're passionate about creating positive change in our community through digital empowerment.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Technical Excellence</h3>
+                    <p>From WordPress to Google Analytics, we use industry-leading tools to deliver exceptional results.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden fees - just honest, affordable services tailored to your budget.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Local Expertise</h3>
+                    <p>We understand the Ethiopian market and cultural context better than international agencies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Toolkit</h2>
+                <p>We leverage industry-leading platforms to deliver exceptional results</p>
+            </div>
+
+            <div class="tools-logos">
+                <div class="tool-logo">
+                    <img src="images/wordPress.jpg" alt="WordPress">
+                </div>
+                <div class="tool-logo">
+                    <img src="images/canavaLogo.jpg" alt="Canva">
+                </div>
+                <div class="tool-logo">
+                    <img src="images/metaLog.jpg" alt="Meta">
+                </div>
+                <div class="tool-logo">
+                    <img src="images/googleLog.jpg" alt="Google">
+                </div>
+                <div class="tool-logo">
+                    <img src="images/notionLog.jpg" alt="Notion">
+                </div>
+                <div class="tool-logo">
+                    <img src="images/googleAnalayticsLogo.png" alt="Google Analytics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Whether you need digital marketing services or energy efficiency solutions, we have the expertise to help
+                your business thrive.</p>
+            <a href="index.html#contact" class="btn">Get Started Today</a>
+        </div>
+    </section>
+
+
+    <script >
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const mobileSlideMenu = document.getElementById("mobile-slide-menu");
+const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+// Open mobile menu on hamburger click
+mobileMenuBtn.addEventListener("click", () => {
+  mobileSlideMenu.classList.add("active");
+});
+
+// Close mobile menu on close button click
+mobileMenuClose.addEventListener("click", () => {
+  mobileSlideMenu.classList.remove("active");
+});
+
+// Close menu when clicking on a link (optional but user friendly)
+function closeMobileMenu() {
+  mobileSlideMenu.classList.remove("active");
+}
+
+    </script>
+
+</body>
+
+
+</html>
