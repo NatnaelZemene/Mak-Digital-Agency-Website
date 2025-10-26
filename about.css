@@ -1,4 +1,4 @@
- 
+    
         :root {
             --primary: #2ecc71;
             --secondary: #3498db;
@@ -60,7 +60,6 @@
             font-weight: 800;
             background: linear-gradient(to right, white, var(--light));
             -webkit-background-clip: text;
-            background-clip: text; /* Added for compatibility */
             -webkit-text-fill-color: transparent;
         }
 
@@ -478,4 +477,4 @@
                 font-size: 3rem;
             }
         }
-  
+    

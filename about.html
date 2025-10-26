@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+
 </head>
 
 <body>
+
+
     <header id="header">
   <div class="container header-container">
     <a href="index.html" class="logo">
@@ -54,6 +59,10 @@
     </ul>
   </div>
 </header>
+>
+
+
+
     <!-- Hero About Section -->
     <section class="hero-about">
         <div class="container">
@@ -316,7 +325,28 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+
+    <script >
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const mobileSlideMenu = document.getElementById("mobile-slide-menu");
+const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+// Open mobile menu on hamburger click
+mobileMenuBtn.addEventListener("click", () => {
+  mobileSlideMenu.classList.add("active");
+});
+
+// Close mobile menu on close button click
+mobileMenuClose.addEventListener("click", () => {
+  mobileSlideMenu.classList.remove("active");
+});
+
+// Close menu when clicking on a link (optional but user friendly)
+function closeMobileMenu() {
+  mobileSlideMenu.classList.remove("active");
+}
+
+    </script>
 
 </body>
 
